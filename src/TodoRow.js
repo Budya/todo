@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 export class TodoRow extends Component {
-    render = () => {
+    render = () => (
         <tr>
           <td>{this.props.item.action}</td>
           <td>
@@ -10,5 +10,5 @@ export class TodoRow extends Component {
             />
           </td>
         </tr>
-    }
+    );
 }
