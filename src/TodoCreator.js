@@ -1,19 +1,27 @@
-import React, {Component} from 'react';
+import React, {
+  Component
+} from 'react';
 
 export class TodoCreator extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {newItemText: ""}
+  constructor(props) {
+    super(props);
+    this.state = {
+      newItemText: ""
     }
+  }
 
-    updateNewTextValue = (event) => {
-        this.setState({newItemText: event.target.value});
-    }
+  updateNewTextValue = (event) => {
+    this.setState({
+      newItemText: event.target.value
+    });
+  }
 
-    createNewTodo = () => {
-        this.props.callback(this.state.newItemText);
-        this.setState({newItemText: ""});
-    }
+  createNewTodo = () => {
+    this.props.callback(this.state.newItemText);
+    this.setState({
+      newItemText: ""
+    });
+  }
     
     render = () => (
       <div className="my-1">
